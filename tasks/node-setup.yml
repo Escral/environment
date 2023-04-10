@@ -1,0 +1,21 @@
+- name: Install nvm
+  shell: |
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    . ~/.bashrc
+  tags:
+    - install
+    - node
+
+- name: Install Node.js
+  shell: |
+    . {{ lookup('ansible.builtin.env', 'HOME') }}/.nvm/nvm.sh && nvm install v16
+  tags:
+    - install
+    - node
+
+- name: Install NPM
+  apt: 
+    name: npm
+  tags:
+    - install
+    - node
