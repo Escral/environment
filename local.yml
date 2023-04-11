@@ -2,6 +2,8 @@
   vars:
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('ansible.builtin.env', 'HOME') }}/.ssh/id_rsa"
+    personal: "{{ lookup('env', 'HOME') }}/personal"
+    www: "/var/www"
   pre_tasks:
   - name: Update Apt
     become: true
@@ -21,7 +23,4 @@
     - import_tasks: tasks/productivity-tools.yml
     - import_tasks: tasks/git-setup.yml
     #- import_tasks: tasks/dotfiles.yml
-    #- import_tasks: tasks/personal-projects.yml
-
-    # Other
-    #- import_tasks: tasks/nvim-setup.yml
+    - import_tasks: tasks/personal-projects.yml

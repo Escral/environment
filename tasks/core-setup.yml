@@ -5,6 +5,7 @@
   tags:
     - install
     - core
+    
 - name: dconf i3
   shell: update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/i3 60 
   tags:
