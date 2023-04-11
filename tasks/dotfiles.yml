@@ -7,7 +7,7 @@
 
 - name: Cloning .dotfiles
   ansible.builtin.git:
-    repo: 'git@github.com:ThePrimeagen/.dotfiles.git'
+    repo: 'https://github.com/Escral/.dotfiles'
     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles"
     recursive: yes
     update: yes

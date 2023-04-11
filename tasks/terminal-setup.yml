@@ -1,0 +1,2 @@
+- name: Install Kitty Terminal
+  apt: name=kitty
