@@ -1,11 +1,18 @@
 - name: Install System Packages
   become: true
   apt:
-    name: [ "curl", "htop", "lsof", "i3", "build-essential", "ninja-build" ]
+    name: [ "curl", "htop", "lsof", "build-essential", "ninja-build", "fd-find" ]
   tags:
     - install
     - core
-    
+
+- name: Link fd-find
+  become: true
+  shell: ln -s $(which fdfind) ~/.local/bin/fd
+  tags:
+    - install
+    - core
+
 - name: dconf i3
   shell: update-alternatives --install /usr/bin/x-session-manager x-session-manager /usr/bin/i3 60 
   tags:
