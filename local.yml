@@ -24,5 +24,7 @@
     - import_tasks: tasks/npm-packages.yml
     - import_tasks: tasks/productivity-tools.yml
     - import_tasks: tasks/git-setup.yml
+    - import_tasks: tasks/terminal-setup.yml
     - import_tasks: tasks/dotfiles.yml
-    - import_tasks: tasks/personal-projects.yml
+    - import_tasks: tasks/apps-setup.yml
+#    - import_tasks: tasks/personal-projects.yml

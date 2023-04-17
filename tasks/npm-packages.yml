@@ -7,7 +7,7 @@
     - node
 
 - name: Install eslint
-  npm:
+  community.general.yarn:
     name: eslint
     global: yes
   tags:
@@ -15,7 +15,7 @@
     - node
 
 - name: Install Typescript server
-  npm:
+  community.general.yarn:
     name: typescript-language-server
     global: yes
   tags:
@@ -23,7 +23,7 @@
     - node
 
 - name: Install Typescript
-  npm:
+  community.general.yarn:
     name: typescript
     global: yes
   tags:
@@ -31,7 +31,7 @@
     - node
 
 - name: Install TS-Node
-  npm:
+  community.general.yarn:
     name: ts-node
     global: yes
   tags:
@@ -39,7 +39,10 @@
     - node
 
 - name: Install PM2
-  npm:
+  community.general.yarn:
     name: pm2
     global: yes
+  tags:
+    - install
+    - node
     

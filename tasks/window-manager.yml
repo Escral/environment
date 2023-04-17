@@ -11,3 +11,10 @@
 #  tags:
 #    - install
 #    - wm
+
+- name: Install rofi
+  apt:
+    name: [ "rofi" ]
+  tags:
+    - install
+    - wm
