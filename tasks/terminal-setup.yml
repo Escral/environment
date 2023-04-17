@@ -1,4 +1,5 @@
 - name: Install Kitty Terminal
+  become: true
   apt: 
     name: [ "kitty" ]
   tags:

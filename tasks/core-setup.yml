@@ -8,7 +8,7 @@
 
 - name: Link fd-find
   become: true
-  shell: ln -s $(which fdfind) ~/.local/bin/fd
+  shell: "rm -f {{ lookup('ansible.builtin.env', 'HOME') }}/.local/bin/fd && ln -s $(which fdfind) {{ lookup('ansible.builtin.env', 'HOME') }}/.local/bin/fd"
   tags:
     - install
-    - cor
+    - core
