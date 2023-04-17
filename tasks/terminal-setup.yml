@@ -12,3 +12,11 @@
   tags:
     - terminal
     - kitty
+
+- name: Install ImageMagick
+  become: true
+  apt: 
+    name: [ "imagemagick" ]
+  tags:
+    - terminal
+    - kitty

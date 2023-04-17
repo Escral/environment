@@ -12,3 +12,13 @@
   tags:
     - install
     - core
+
+- name: Install Russian Language
+  become: true
+  shell: "apt -y install $(check-language-support -l ru)"
+  tags:
+    - install
+    - core
+    - language
+
+    
