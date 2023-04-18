@@ -5,3 +5,12 @@
   tags:
     - install
     - productivity
+
+- name: Install fzf-marks
+  ansible.builtin.git:
+    repo: 'https://github.com/urbainvaes/fzf-marks'
+    dest: "~/.config/fzf/plugins/fzf-marks"
+  tags:
+    - install
+    - productivity
+    - fzf

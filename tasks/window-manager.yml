@@ -12,12 +12,6 @@
 #    - install
 #    - wm
 
-- name: Configure X
-  shell: 'xset r rate 400'
-  tags:
-    - install
-    - wm
-
 - name: Install rofi
   apt:
     name: [ "rofi" ]
