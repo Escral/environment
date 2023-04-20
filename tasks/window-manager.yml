@@ -1,7 +1,7 @@
 - name: Install System Packages
   become: true
   apt:
-    name: [ "i3" ]
+    name: [ "i3", "rofi", "numlockx", "volumeicon-alsa" ]
   tags:
     - install
     - wm
@@ -11,18 +11,3 @@
 #  tags:
 #    - install
 #    - wm
-
-- name: Install rofi
-  apt:
-    name: [ "rofi" ]
-  tags:
-    - install
-    - wm
-
-- name: Install volumeicon
-  apt:
-    name: [ "volumeicon-alsa" ]
-  tags:
-    - install
-    - wm
-    - volume
