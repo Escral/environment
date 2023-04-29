@@ -1,7 +1,7 @@
 - name: Install System Packages
   become: true
   apt:
-    name: [ "curl", "htop", "lsof", "build-essential", "ninja-build", "fd-find", "rofi" ]
+    name: [ "curl", "htop", "lsof", "build-essential", "ninja-build", "fd-find", "rofi", "ripgrep" ]
   tags:
     - install
     - core
